@@ -5,60 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Política de Privacidade - QuantumLuck</title>
   <style>
-    :root {
-      --primary: #6a11cb;
-      --secondary: #2575fc;
-      --accent: #ff6b6b;
-      --light: #f8f9fa;
-    }
+  :root {
+    --primary: #2e7d32;      /* verde executivo, médio escuro e elegante */
+    --secondary: #66bb6a;    /* verde suave e agradável */
+    --accent: #b8860b;       /* dourado mais escuro e sofisticado */
+    --light: #f8f9fa;        /* branco claro */
+    --dark: #0a0a0a;         /* preto profundo */
+  }
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      background: linear-gradient(135deg, var(--primary), var(--secondary));
-      color: var(--light);
-      line-height: 1.7;
-      padding: 40px 20px;
-    }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(135deg, var(--dark), var(--primary));
+    color: var(--light);
+    line-height: 1.7;
+    padding: 40px 20px;
+  }
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      background: rgba(255,255,255,0.08);
-      backdrop-filter: blur(12px);
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
-    }
+  .container {
+    max-width: 900px;
+    margin: auto;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
 
-    h1 {
-      text-align: center;
-      margin-bottom: 20px;
-      color: var(--accent);
-    }
+  .container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  }
 
-    h2 {
-      margin-top: 30px;
-      color: var(--accent);
-    }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--accent);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
+  }
 
-    p {
-      margin: 15px 0;
-      text-align: justify;
-    }
+  h2 {
+    margin-top: 30px;
+    color: var(--accent);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 5px;
+  }
 
-    footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 0.9rem;
-      opacity: 0.8;
-    }
+  p {
+    margin: 15px 0;
+    text-align: justify;
+  }
 
-    a {
-      color: var(--light);
-      text-decoration: underline;
-    }
-  </style>
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a:hover {
+    color: var(--secondary);
+    text-decoration: underline;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9rem;
+    opacity: 0.85;
+  }
+</style>
+
+
+
 </head>
 <body>
   <div class="container">
