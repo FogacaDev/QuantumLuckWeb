@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuantumLuck - Simulador Quântico</title>
+  <style>
+:root {
+  --primary: #1a6b1a;     /* verde médio escuro */
+  --secondary: #56d36f;   /* verde claro e vibrante */
+  --accent: #b8860b;      /* dourado mais escuro e elegante */
+  --light: #f8f9fa;       /* branco claro */
+  --dark: #0b0b0b;        /* preto suave */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, var(--dark), var(--primary));
+  color: var(--light);
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Partículas */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png');
+  opacity: 0.15;
+  z-index: -1;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px 60px;
+  animation: fadeIn 2s ease;
+}
+
+.app-icon {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto 25px;
+  background: linear-gradient(45deg, var(--secondary), var(--accent));
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.8rem;
+  font-weight: bold;
+  color: var(--dark);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  animation: float 4s ease-in-out infinite;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+  color: var(--accent);
+}
+
+header p {
+  font-size: 1.2rem;
+  max-width: 750px;
+  margin: 0 auto;
+  opacity: 0.9;
+  color: var(--secondary);
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: var(--accent);
+  color: var(--dark);
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 35px;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 20px var(--accent);
+}
+
+.section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 30px;
+  background: rgba(26,107,26,0.6); /* fundo verde transparente */
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1.5s forwards;
+}
+
+.section:nth-child(odd) { animation-delay: 0.4s; }
+.section:nth-child(even) { animation-delay: 0.8s; }
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--accent);
+  font-size: 2rem;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.feature {
+  background: rgba(86,211,111,0.7); /* verde claro */
+  padding: 25px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.feature:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.feature span {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.long-text {
+  text-align: justify;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--light);
+}
+
+.steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.step {
+  background: rgba(26,107,26,0.7);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.step:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px var(--accent);
+}
+
+.step h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.disclaimer {
+  margin-top: 30px;
+  padding: 20px;
+  border-left: 4px solid var(--accent);
+  background: rgba(26,107,26,0.6);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  text-align: justify;
+  color: var(--light);
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: rgba(0,0,0,0.8);
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+  margin: 0 10px;
+  opacity: 0.9;
+}
+
+footer a:hover {
+  opacity: 1;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <div class="app-icon">QL</div>
+    <h1>QuantumLuck</h1>
+    <p>Seu app de meditação guiada para potencializar suas vibrações, alinhar energia e alcançar resultados.</p>
+    <a href="#" class="cta-button">Baixar Agora</a>
+  </header>
+
+  <!-- Recursos -->
+  <section class="section">
+    <h2>Recursos Principais</h2>
+    <div class="features">
+      <div class="feature">
+        <span>✨</span>
+        <h3>Geração de Frequências</h3>
+        <p>Liberação de uma frequência Binaural Beat aleatória alinhada com a intenção do manifestador da realidade.</p>
+      </div>
+      <div class="feature">
+        <span>📜</span>
+        <h3>Afirmações</h3>
+        <p>geração de uma Afirmação aleatória alinhadada com a intenção do manifestador seguindo padrões de lei da atração, metafísica e programação mental.</p>
+      </div>
+      <div class="feature">
+        <span>📊</span>
+        <h3>Análise Probabilística</h3>
+        <p>Visualize as probabilidades, alinhe a frase gerada com sua realidade e analise diferentes possibilidades e aplicações possíveis para obtenção dos resultados.<</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Como Funciona (texto integral preservado) -->
+  <section class="section">
+    <h2>Como Funciona</h2>
+    <p class="long-text">
+      Baseado na Lei da Atração e Física Quântica, o QuantumLuck segue em sua matemática de geração de frequências e frases padrões numerológicos e geométricos sagrados, 
+      fundamentados em estudos científicos sobre física quântica, princípios de Nikola Tesla e geometrias estudadas por Platão, Pitágoras e povos antigos como Egípcios e Maias.
+    </p>
+    <p class="long-text">
+      O QuantumLuck foi desenvolvido usando estes padrões e funciona sob o seguinte sistema de uso recomendado: 3 sessões de meditação diárias (manhã, tarde e noite), 
+      meditando por 3 minutos sobre 3 frases geradas seguindo o Método 3x3x3.  
+      Ao clicar no botão, o app gera uma frase e uma frequência de 30 segundos, ambas aleatórias.
+    </p>
+    <p class="long-text">
+      Assim, você lê a afirmação, mentaliza seu desejo e entra em harmonia com a frequência Binaural Beat entregue pelo app.  
+      O aplicativo não garante realização de desejos nem obtenção de riquezas, pois esta é apenas a primeira etapa do processo: a mentalização e emanação para o campo (Cosmos), 
+      ajudando a alinhar sua frequência em campos harmônicos.
+    </p>
+    <p class="long-text">
+      O app gera ondas binaurais cuidadosamente configuradas com padrões matemáticos simbólicos, unindo ciência e espiritualidade.  
+      Desenvolvido para melhorar sua qualidade de vida, ajudando seu foco na obtenção de resultados, sua prática fortalece a programação mental necessária para alinhar seus objetivos às suas ações.
+    </p>
+    
+    <!-- Passos 3x3x3 -->
+    <div class="steps">
+      <div class="step"><h3>1. Emoção</h3><p>Direcione sua emoção para o objetivo de desejo.</p></div>
+      <div class="step"><h3>2. Mentalização</h3><p>Visualize em detalhes como se já tivesse conquistado.</p></div>
+      <div class="step"><h3>3. Acreditar</h3><p>A fé é o combustível para a realização.</p></div>
+      <div class="step"><h3>4. Ação</h3><p>Pratique diariamente,e aplique com dedicação e foco no agora ao trabalho necessário para alcançar.</p></div>
+    </div>
+
+    <div class="disclaimer">
+      Não se esqueça do principal combustível da meditação Quântica: Acreditar.  
+      Estes são os princípios da Lei da Atração para o colapso de onda e materialização do seu sonho. Acredite.  
+      Faça acontecer e aproveite sua vitória, você merece!
+    </div>
+  </section>
+
+  <!-- CTA Final -->
+  <section class="section" style="text-align:center;">
+    <h2>Inicie sua Jornada Quântica</h2>
+    <p>Torne-se um <strong>Explorador Quântico</strong> e alinhe mente, emoção e ação.</p>
+    <a href="#" class="cta-button">Baixar Agora</a>
+  </section>
+  <!-- Seção de Transparência -->
+<section class="section" style="text-align:center;">
+  <h2>Transparência & Confiança</h2>
+  <p>
+    🔐 No <strong>QuantumLuck</strong>, sua jornada é sagrada — e seus dados também.  
+    Respeitamos sua privacidade e seguimos princípios claros de proteção.
+  </p>
+  <a href="politica-de-privacidade.html" class="cta-button" style="margin-top:20px;">Ler Política de Privacidade</a>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>QuantumLuck © 2025 - Todos os direitos reservados</p>
+  <div>
+    <a href="politica-de-privacidade.html">Política de Privacidade</a> |
+    <a href="#">Contato</a> |
+    <a href="#">Instagram</a>
+  </div>
+</footer>
+
+</body>
+</html>
