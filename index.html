@@ -19,19 +19,19 @@
 
     <!-- ÁTOMO NO CENTRO DA IMAGEM -->
     <div class="app-icon">
-  <!-- ⚡ Efeitos elétricos -->
-  <div class="electric-flash"></div>
-  <div class="electric-crack"></div>
-  <div class="flash-small"></div>
+      <!-- ⚡ Efeitos elétricos -->
+      <div class="electric-flash"></div>
+      <div class="electric-crack"></div>
+      <div class="flash-small"></div>
 
-  <!-- 🌌 Partículas -->
-  <div class="particle p1"></div>
-  <div class="particle p2"></div>
-  <div class="particle p3"></div>
+      <!-- 🌌 Partículas -->
+      <div class="particle p1"></div>
+      <div class="particle p2"></div>
+      <div class="particle p3"></div>
 
-  <!-- LOGO -->
-  <img src="assets/btn.png" alt="QuantumLuck Logo" class="logo-img">
-</div>
+      <!-- LOGO -->
+      <img src="assets/btn.png" alt="QuantumLuck Logo" class="logo-img">
+    </div>
 
 
   </header>
@@ -463,7 +463,7 @@
       line-height: 1.8;
     }
 
-    
+
 
     /* ===========================
        BOTÃO
@@ -628,6 +628,62 @@
           /* fundo principal */
         );
       pointer-events: none;
+    }
+
+    /* ============================= */
+    /* RESPONSIVO PARA CELULAR       */
+    /* ============================= */
+    @media (max-width: 768px) {
+      .hero-header {
+        height: 350px;
+        /* altura menor no celular */
+      }
+
+      .hero-bg {
+        background-size: cover;
+        background-position: center;
+      }
+
+      .app-icon {
+        width: 130px;
+        /* menor tamanho do átomo */
+        height: 130px;
+      }
+
+      .app-icon::before {
+        width: 160px;
+        height: 160px;
+      }
+
+      .app-icon::after {
+        width: 200px;
+        height: 200px;
+      }
+
+      .logo-img {
+        width: 100%;
+        height: auto;
+        max-width: 120px;
+      }
+
+      .intro-text {
+        font-size: 1rem;
+        padding: 30px 15px 15px;
+      }
+
+      .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+      }
+
+      .section {
+        padding: 30px 20px;
+        margin: 50px 15px;
+      }
+
+      .section h2 {
+        font-size: 2rem;
+      }
     }
   </style>
 
