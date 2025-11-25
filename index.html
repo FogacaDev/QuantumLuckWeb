@@ -44,10 +44,10 @@
     <p>Um aplicativo de alinhamento mental e emocional que combina afirmações, frequências, gravação de sessões com sua
       própria voz e gestão de sonhos — tudo para amplificar seu foco e sua energia de manifestação.</p>
     <div style="text-align:center;">
-    <a href="#pre-launch" class="cta-button" onclick="showComingSoon()">
+      <a href="#pre-launch" class="cta-button" onclick="showComingSoon()">
         🚀 Em Breve na Play Store
-    </a>
-</div>
+      </a>
+    </div>
   </section>
 
 
@@ -206,8 +206,8 @@
     <h2>Inicie sua Jornada Quântica</h2>
     <p>Torne-se um <strong>Explorador Quântico</strong> e alinhe mente, emoção e ação.</p>
     <a href="#pre-launch" class="cta-button" onclick="showComingSoon()">
-    🔔 Em breve na Playstore
-</a>
+      🔔 Em breve na Playstore
+    </a>
   </section>
 
 
@@ -768,16 +768,59 @@
     .phrase-bubble.show {
       opacity: 1;
     }
+
+
+    /* Balão Educativo */
+.tutorial-bubble {
+    position: fixed;
+    bottom: 600px !important; /* 🔥 DISTÂNCIA DO FUNDO */
+    left: 50%;
+    transform: translateX(-50%); /* 🔥 SÓ HORIZONTAL */
+    background: rgba(76, 195, 255, 0.95);
+    color: #021124;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 16px;
+    z-index: 9998;
+    box-shadow: 0 5px 20px rgba(76, 195, 255, 0.6);
+    border: 2px solid #4cc3ff;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    text-align: center;
+}
+
+    /* Seta apontando para o átomo */
+    .tutorial-bubble::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 10px solid transparent;
+      border-top-color: rgba(76, 195, 255, 0.95);
+    }
+
+    /* Para mobile */
+    @media (max-width: 768px) {
+      .tutorial-bubble {
+        font-size: 14px;
+        padding: 10px 16px;
+        bottom: 100px;
+      }
+    }
   </style>
 
   <script>
-function showComingSoon() {
-    alert("🎯 QuantumLuck em breve na Google Play Store!\n\nEstamos na fase final de testes. Cadastre-se para ser um dos primeiros a baixar quando lançarmos oficialmente.\n\n📧 deathrash@msn.com");
-    
-    // Opcional: Abrir email
-    // window.location.href = "mailto:deathrash@msn.com?subject=Quero ser notificado do lançamento&body=Olá! Gostaria de ser avisado quando o QuantumLuck estiver disponível.";
-}
-</script>
+    function showComingSoon() {
+      alert("🎯 QuantumLuck em breve na Google Play Store!\n\nEstamos na fase final de testes. Cadastre-se para ser um dos primeiros a baixar quando lançarmos oficialmente.\n\n📧 deathrash@msn.com");
+
+      // Opcional: Abrir email
+      // window.location.href = "mailto:deathrash@msn.com?subject=Quero ser notificado do lançamento&body=Olá! Gostaria de ser avisado quando o QuantumLuck estiver disponível.";
+    }
+  </script>
 
 </body>
 

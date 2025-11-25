@@ -1458,3 +1458,57 @@ function initAtom() {
         console.log('✅ Átomo inicializado com sucesso!');
     }
 }
+
+// BALÃO EDUCATIVO - Aparece automaticamente
+function criarBalaoEducativo() {
+    // Criar o balão
+    const tutorialBubble = document.createElement('div');
+    tutorialBubble.className = 'tutorial-bubble';
+    tutorialBubble.textContent = '✨ Toque no átomo 🔮';
+
+    // Estilo do balão educativo
+    tutorialBubble.style.cssText = `
+        position: fixed;
+        bottom: 120px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(76, 195, 255, 0.95);
+        color: #021124;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-weight: bold;
+        font-size: 16px;
+        z-index: 9998;
+        box-shadow: 0 5px 20px rgba(76, 195, 255, 0.6);
+        border: 2px solid #4cc3ff;
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        pointer-events: none;
+        white-space: nowrap;
+    `;
+
+    document.body.appendChild(tutorialBubble);
+
+    // Animação de entrada
+    setTimeout(() => {
+        tutorialBubble.style.opacity = '1';
+        tutorialBubble.style.transform = 'translateX(-50%) translateY(-10px)';
+    }, 100);
+
+    // Auto-remover após 5 segundos
+    setTimeout(() => {
+        tutorialBubble.style.opacity = '0';
+        tutorialBubble.style.transform = 'translateX(-50%) translateY(0px)';
+        setTimeout(() => {
+            if (tutorialBubble.parentNode) {
+                tutorialBubble.parentNode.removeChild(tutorialBubble);
+            }
+        }, 500);
+    }, 5000);
+}
+
+// Chamar a função após o DOM carregar
+document.addEventListener('DOMContentLoaded', function () {
+    // Esperar 2 segundos antes de mostrar o balão educativo
+    setTimeout(criarBalaoEducativo, 2000);
+});
