@@ -1407,5 +1407,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 4️⃣ Remover balão após 2 segundos
     setTimeout(() => bubble.remove(), 4000);
+    atom.addEventListener('touchstart', triggerClick);
   });
 });
