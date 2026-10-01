@@ -1,838 +1,735 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuantumLuck - Simulador Quântico</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+    <title>QuantumLuck — Meditação, Consciência e Manifestação</title>
 
-<body>
+    <meta
+      name="description"
+      content="QuantumLuck é uma experiência de meditação guiada que reúne afirmações, visualização, Salmos, sua própria voz, frequências sonoras e uma Agenda de Sonhos para explorar a relação entre intenção, consciência e ação."
+    />
 
-  <!-- ===========================
-       HERO COM IMAGEM + ÁTOMO
-  ============================ -->
-  <header class="hero-header">
+    <meta
+      name="keywords"
+      content="meditação quântica,meditação,manifestação,lei da atração,afirmações,programação mental,visualização,metafísica,consciência,frequências,binaural beats,Salmos,espiritualidade,foco,sonhos"
+    />
 
-    <div class="hero-bg"></div>
+    <meta name="author" content="Renan Fogaça" />
+    <meta name="theme-color" content="#020617" />
 
-    <!-- ÁTOMO NO CENTRO DA IMAGEM -->
-    <div class="app-icon">
-      <!-- ⚡ Efeitos elétricos -->
-      <div class="electric-flash"></div>
-      <div class="electric-crack"></div>
-      <div class="flash-small"></div>
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="QuantumLuck — Meditação, Consciência e Manifestação"
+    />
+    <meta
+      property="og:description"
+      content="Explore a relação entre intenção, consciência, som e ação."
+    />
+    <meta property="og:image" content="assets/QuantumLuck.png" />
+    <meta property="og:site_name" content="QuantumLuck" />
+    <meta property="og:url" content="https://quantumluck.app" />
 
-      <!-- 🌌 Partículas -->
-      <div class="particle p1"></div>
-      <div class="particle p2"></div>
-      <div class="particle p3"></div>
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="QuantumLuck — Meditação, Consciência e Manifestação"
+    />
+    <meta
+      name="twitter:description"
+      content="Medite. Mentalize. Direcione. Aja."
+    />
+    <meta name="twitter:image" content="assets/QuantumLuck.png" />
 
-      <!-- LOGO -->
-      <img src="assets/btn.png" alt="QuantumLuck Logo" class="logo-img">
-    </div>
+    <link rel="icon" type="image/png" href="assets/btn.png" />
+    <link rel="apple-touch-icon" href="assets/btn.png" />
 
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  </header>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-  <!-- ===========================
-       CONTEÚDO ABAIXO DO HEADER
-  ============================ -->
+  <body>
+    <!-- ÁTOMO -->
+    <header class="hero-header">
+      <div class="hero-bg"></div>
 
-  <section class="intro-text">
-    <p>Um aplicativo de alinhamento mental e emocional que combina afirmações, frequências, gravação de sessões com sua
-      própria voz e gestão de sonhos — tudo para amplificar seu foco e sua energia de manifestação.</p>
-    <div style="text-align:center;">
-  <a 
-    href="https://play.google.com/store/apps/details?id=com.quantumluck.app"
-    class="cta-button"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    📲 Baixar na Play Store
-  </a>
-</div>
-  </section>
+      <div class="app-icon">
+        <div class="electric-flash"></div>
+        <div class="electric-crack"></div>
+        <div class="flash-small"></div>
 
+        <div class="particle p1"></div>
+        <div class="particle p2"></div>
+        <div class="particle p3"></div>
 
-  <!-- =======================================
-        RECURSOS (100% MANTIDO)
-  ======================================== -->
-  <section class="section">
-    <h1>QuantumLuck</h1>
-    <h2>Recursos Principais</h2>
+        <img
+          src="assets/btn.png"
+          alt="QuantumLuck — Meditação Quântica"
+          class="logo-img"
+        />
+      </div>
+    </header>
 
-    <div class="features">
+    <!-- HERO -->
+    <section class="intro-text">
+      <p class="hero-eyebrow">
+        ✨ Sintonize sua mente. Direcione sua intenção.
+      </p>
 
-      <div class="feature">
-        <i class="fas fa-magic"></i>
-        <h3>Sorteio de Afirmações</h3>
-        <p>O app sorteia frases afirmativas criadas com base em Lei da Atração, Programação Mental e Metafísica
-          Quântica, conectando emoção, intenção e foco.</p>
+      <h1 class="hero-title">
+        Meditação quântica<br />
+        <span class="hero-title-gradient">guiada</span>
+      </h1>
+
+      <p class="hero-tagline">
+        <strong>Três frases. Três minutos. Três vezes ao dia.</strong>
+      </p>
+
+      <p class="hero-subtitle">
+        O <strong>QuantumLuck</strong> combina afirmações, visualização,
+        espiritualidade, sons e frequências em uma experiência de meditação
+        criada para transformar alguns minutos do seu dia em um momento de
+        <strong>presença, intenção e direção</strong>.
+      </p>
+
+      <div class="hero-pills">
+        <span class="hero-pill">
+          <i class="fas fa-magic"></i> 4 fontes de sorteio
+        </span>
+
+        <span class="hero-pill">
+          <i class="fas fa-wave-square"></i> Biblioteca de sons
+        </span>
+
+        <span class="hero-pill">
+          <i class="fas fa-lock"></i> 100% offline
+        </span>
+
+        <span class="hero-pill"> <i class="fas fa-ban"></i> Sem cadastro </span>
       </div>
 
-      <div class="feature">
-        <i class="fas fa-star"></i>
-        <h3>Favoritar Frases</h3>
-        <p>Salve suas afirmações favoritas para acessá-las facilmente e reforçar sua mentalidade diariamente.</p>
+      <p class="hero-highlight">
+        🌟 <strong>Na v1.1.0:</strong>
+        crie suas próprias frases e escolha exatamente o que participa da sua
+        experiência.
+      </p>
+
+      <div class="cta-container">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.quantumluck.app"
+          class="cta-button cta-button-large"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-google-play"></i>
+          Baixar grátis na Play Store
+        </a>
+
+        <p class="cta-hint">Grátis · Sem cadastro · Android</p>
+      </div>
+    </section>
+
+    <!-- O QUE É -->
+    <section class="section">
+      <h2>O que é o QuantumLuck?</h2>
+
+      <p class="long-text">
+        O QuantumLuck nasceu de uma pergunta simples:
+        <strong>
+          o que pode acontecer quando você para por alguns minutos, escolhe uma
+          intenção e passa a direcionar conscientemente a sua atenção?
+        </strong>
+      </p>
+
+      <p class="long-text">
+        A proposta reúne diferentes linguagens que atravessam o desenvolvimento
+        pessoal:
+        <strong>
+          meditação, afirmações, visualização, espiritualidade, manifestação,
+          programação mental, som e reflexão </strong
+        >.
+      </p>
+
+      <p class="long-text">
+        O nome QuantumLuck faz referência ao encontro entre a ideia de
+        <strong>“quantum”</strong> — um universo fascinante de possibilidades,
+        probabilidades e fenômenos que desafiam a intuição — e
+        <strong>“luck”</strong>, a sorte, aquilo que muitas vezes percebemos
+        como encontro entre oportunidade, momento e circunstância.
+      </p>
+
+      <div class="highlight-box">
+        <i class="fas fa-atom"></i>
+
+        <div>
+          <h3>Não é sobre acreditar em uma fórmula mágica.</h3>
+
+          <p>
+            É sobre criar um espaço para observar, escolher, imaginar, repetir e
+            agir.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CIÊNCIA -->
+    <section class="section">
+      <h2>Entre ciência, consciência e mistério</h2>
+
+      <p class="long-text">
+        A <strong>mecânica quântica</strong> revelou um universo muito diferente
+        da nossa experiência cotidiana. Conceitos como probabilidade,
+        superposição, incerteza e observação mudaram profundamente a maneira
+        como a ciência descreve a natureza.
+      </p>
+
+      <p class="long-text">
+        Mas existe uma distinção importante:
+        <strong> a física quântica não é uma prova da Lei da Atração </strong>,
+        nem demonstra que pensamentos isolados controlem diretamente
+        acontecimentos físicos.
+      </p>
+
+      <p class="long-text">
+        O QuantumLuck usa esse universo de ideias como
+        <strong>inspiração e linguagem de exploração</strong>. Ao lado da
+        ciência, entram questões filosóficas e metafísicas: o que é realidade?
+        Como percebemos o mundo? O que acontece quando uma intenção passa a
+        orientar nossas escolhas?
+      </p>
+
+      <div class="benefits">
+        <div class="benefit">
+          <i class="fas fa-atom"></i>
+          <p>Física &amp; probabilidade</p>
+        </div>
+
+        <div class="benefit">
+          <i class="fas fa-brain"></i>
+          <p>Consciência &amp; atenção</p>
+        </div>
+
+        <div class="benefit">
+          <i class="fas fa-infinity"></i>
+          <p>Metafísica &amp; significado</p>
+        </div>
+
+        <div class="benefit">
+          <i class="fas fa-bullseye"></i>
+          <p>Intenção &amp; direção</p>
+        </div>
+
+        <div class="benefit">
+          <i class="fas fa-person-running"></i>
+          <p>Ação &amp; constância</p>
+        </div>
       </div>
 
-      <div class="feature">
-        <i class="fas fa-microphone"></i>
-        <h3>Gravação de Sessões com sua Voz</h3>
-        <p>Grave suas próprias afirmações e transforme-as em sessões de meditação guiada com sua voz, combinadas com
-          frequências binaurais geradas pelo app.</p>
-      </div>
+      <p class="long-text disclaimer-text">
+        O QuantumLuck não transforma essas áreas em uma única teoria. Ele cria
+        uma experiência onde você pode
+        <strong>
+          explorar essas ideias sem precisar escolher uma única interpretação </strong
+        >.
+      </p>
+    </section>
 
-      <div class="feature">
-        <i class="fas fa-headphones"></i>
-        <h3>Sessões de Voz + Frequências</h3>
-        <p>Escute suas gravações misturadas com frequências cuidadosamente configuradas para ativar estados mentais
-          específicos.</p>
-      </div>
+    <!-- MANIFESTAÇÃO -->
+    <section class="section">
+      <h2>Manifestação começa com intenção — e continua com ação</h2>
 
-      <div class="feature">
-        <i class="fas fa-folder"></i>
-        <h3>Salvamento de Sessões</h3>
-        <p>Crie, nomeie e salve sessões personalizadas para ouvir sempre que desejar.</p>
-      </div>
+      <p class="long-text">
+        Afirmações e visualização são utilizadas em diferentes práticas de
+        desenvolvimento pessoal para manter uma ideia presente na mente. O
+        QuantumLuck transforma essa ideia em uma rotina simples:
+        <strong> escolher, ouvir, respirar, visualizar, repetir e agir </strong
+        >.
+      </p>
 
-      <div class="feature">
-        <i class="fas fa-moon"></i>
-        <h3>Gerenciador de Sonhos</h3>
-        <p>Registre sonhos e acompanhe sua progressão, sentimentos, interpretações e acompanhe sua evolução e padrões de
-          conquistas construindo uma linha do tempo.</p>
-      </div>
+      <p class="long-text">
+        Em vez de tratar manifestação como uma promessa de que o universo
+        simplesmente entregará um resultado, a proposta é usar a intenção como
+        <strong>um ponto de direção</strong>.
+      </p>
 
-      <div class="feature">
-        <i class="fas fa-chart-line"></i>
-        <h3>Análise Probabilística</h3>
-        <p>Visualize como a frase sorteada se conecta com sua intenção e explore caminhos lógicos e emocionais
-          possíveis.</p>
-      </div>
+      <p class="long-text">
+        Imagine não apenas o resultado final. Imagine também você vivendo o
+        processo: as decisões que precisa tomar, os hábitos que precisa
+        construir, os obstáculos que pode encontrar e o próximo passo que está
+        ao seu alcance.
+      </p>
 
-      <div class="feature">
+      <div class="highlight-box">
+        <i class="fas fa-wand-magic-sparkles"></i>
+
+        <div>
+          <h3>Medite. Mentalize. Direcione. Aja.</h3>
+
+          <p>
+            Porque uma intenção ganha outra dimensão quando começa a orientar
+            comportamentos reais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMO USAR -->
+    <section class="section">
+      <h2>Como usar o QuantumLuck</h2>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Defina uma intenção</h3>
+          <p>
+            Pergunte: o que eu quero cultivar, transformar ou construir neste
+            momento da minha vida?
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Escolha suas fontes</h3>
+          <p>
+            Ative afirmações, Salmos, suas próprias frases ou favoritos. Você
+            decide o que participa do sorteio.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Crie suas frases</h3>
+          <p>
+            Escreva afirmações que expressem direção e aquilo que você deseja
+            cultivar.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Toque o Átomo</h3>
+          <p>
+            Uma frase é selecionada e a experiência sonora começa. Leia, respire
+            e permita alguns minutos de atenção.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">5</div>
+          <h3>Use sua própria voz</h3>
+          <p>
+            Grave uma afirmação pessoal e combine sua voz com a experiência
+            sonora escolhida.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">6</div>
+          <h3>Visualize</h3>
+          <p>
+            Imagine o resultado, mas também o caminho: escolhas, atitudes,
+            rotina e próximo passo.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">7</div>
+          <h3>Registre na Agenda</h3>
+          <p>
+            Transforme uma intenção em objetivo e um objetivo em passos que
+            possam ser acompanhados.
+          </p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">8</div>
+          <h3>Volte amanhã</h3>
+          <p>
+            O valor está na prática consistente. Use a sessão como um ritual de
+            presença e direcionamento.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- RECURSOS -->
+    <section class="section">
+      <h2>Recursos Principais</h2>
+
+      <div class="features">
+        <div class="feature">
+          <i class="fas fa-magic"></i>
+          <h3>Sorteio de Afirmações</h3>
+          <p>
+            Receba uma frase de forma dinâmica e use o momento para direcionar
+            sua atenção.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-pen-fancy"></i>
+          <h3>Frases Personalizadas</h3>
+          <p>
+            Crie até 100 frases com aquilo que você deseja cultivar ou
+            direcionar.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-sliders-h"></i>
+          <h3>4 Fontes Configuráveis</h3>
+          <p>
+            Afirmações, Salmos, Suas Frases e Favoritos. Combine as fontes como
+            quiser.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-star"></i>
+          <h3>Favoritos</h3>
+          <p>Guarde as frases que mais ressoam com você.</p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-book"></i>
+          <h3>Salmos Sagrados</h3>
+          <p>
+            Inclua textos dos Salmos em momentos de meditação, reflexão e
+            espiritualidade.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-wave-square"></i>
+          <h3>Frequências &amp; Paisagens Sonoras</h3>
+          <p>Explore frequências, sons ambientes e experiências binaurais.</p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-microphone"></i>
+          <h3>Sua Própria Voz</h3>
+          <p>
+            Grave suas afirmações e transforme uma intenção escrita em uma
+            experiência sonora pessoal.
+          </p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-headphones"></i>
+          <h3>Voz + Frequências</h3>
+          <p>Sua gravação pode tocar junto com a experiência sonora.</p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-folder"></i>
+          <h3>Áudios Salvos</h3>
+          <p>Nomeie e mantenha suas gravações para ouvir novamente.</p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-moon"></i>
+          <h3>Agenda de Sonhos</h3>
+          <p>Registre objetivos e acompanhe sua evolução.</p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-language"></i>
+          <h3>Bilíngue PT/EN</h3>
+          <p>Use o aplicativo em português ou inglês.</p>
+        </div>
+
+        <div class="feature">
+          <i class="fas fa-lock"></i>
+          <h3>Offline &amp; Privado</h3>
+          <p>
+            Sem cadastro e sem login. Sua experiência permanece no dispositivo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SONS -->
+    <section class="section">
+      <h2>Um universo de sons para diferentes momentos</h2>
+
+      <p class="long-text">
+        O som pode transformar a atmosfera de uma prática. Por isso, o
+        QuantumLuck reúne
+        <strong>
+          frequências, experiências binaurais e paisagens sonoras
+        </strong>
+        para você experimentar diferentes ambientes durante seus momentos de
+        atenção e meditação.
+      </p>
+
+      <p class="long-text">
+        Você pode escolher uma experiência para acompanhar foco, relaxamento,
+        sono ou simplesmente criar o ambiente sonoro que combina com o momento.
+      </p>
+
+      <div class="highlight-box">
         <i class="fas fa-wave-square"></i>
-        <h3>Frequências Binaurais</h3>
-        <p>O app gera frequências aleatórias em loop para reforçar estados meditativos e harmônicos.</p>
+
+        <div>
+          <h3>Não existe uma frequência universal para todos.</h3>
+
+          <p>Existe a experiência sonora que você escolhe explorar agora.</p>
+        </div>
       </div>
 
-    </div>
-  </section>
+      <p class="long-text disclaimer-text">
+        As frequências e sons do aplicativo são apresentados como parte da
+        experiência de meditação e não como tratamento médico ou promessa de
+        efeito clínico.
+      </p>
+    </section>
 
+    <!-- SUA VOZ -->
+    <section class="section">
+      <h2>Sua voz. Sua intenção.</h2>
 
-  <!-- =======================================
-        COMO FUNCIONA (MANTIDO)
-  ======================================== -->
-  <section class="section">
-    <h2>Como Funciona</h2>
+      <p class="long-text">
+        Existem pensamentos que passam pela mente. Existem palavras que
+        escrevemos. E existem palavras que ouvimos da
+        <strong>nossa própria voz</strong>.
+      </p>
 
-    <p class="long-text">
-      O QuantumLuck une princípios de Lei da Atração, Física Quântica, Geometria Sagrada e Programação Mental para criar
-      um ambiente completo de foco, frequência e intenção. Suas frases, frequências e áudios seguem padrões simbólicos,
-      matemáticos e vibracionais.
-    </p>
+      <p class="long-text">
+        O QuantumLuck permite transformar suas próprias intenções em uma
+        experiência personalizada: grave uma afirmação, dê um nome à gravação e
+        escute sua voz acompanhada pela experiência sonora escolhida.
+      </p>
 
-    <p class="long-text">
-      Ao tocar o botão principal, o app sorteia automaticamente uma frase afirmativa única e uma frequência binaural em
-      loop — o ponto central para o Método 3x3x3:
-      3 frases · 3 minutos · 3 sessões ao dia.
-    </p>
+      <p class="long-text">
+        É uma forma simples de tornar a prática mais pessoal — porque a frase
+        passa a carregar
+        <strong>suas próprias palavras, intenção e voz</strong>.
+      </p>
+    </section>
 
-    <p class="long-text">
-      Você também pode gravar sua própria voz e transformar suas palavras em sessões guiadas poderosas, onde sua voz é
-      combinada com frequências específicas para amplificar o estado meditativo.
-    </p>
+    <!-- AGENDA -->
+    <section class="section">
+      <h2>Da intenção para o mundo real</h2>
 
-    <p class="long-text">
-      Além disso, o app oferece um Gerenciador de Sonhos com progressão, permitindo registrar sonhos, interpretações e
-      sentimentos para acompanhar sinais, padrões e avanços emocionais ao longo do tempo.
-    </p>
+      <p class="long-text">
+        Uma intenção que nunca sai da mente continua sendo apenas uma
+        possibilidade. A <strong>Agenda de Sonhos</strong> existe para criar uma
+        ponte entre aquilo que você imagina e aquilo que pode acompanhar na
+        prática.
+      </p>
 
-    <div class="steps">
+      <p class="long-text">
+        Registre objetivos. Observe sua evolução. Releia o que escreveu. Perceba
+        o que mudou. E, principalmente, faça uma pergunta simples:
+        <strong>qual é o próximo passo que eu posso dar?</strong>
+      </p>
 
-      <div class="step">
-        <div class="step-number">1</div>
-        <h3>Gere uma Frase</h3>
-        <p>Sorteie uma frase afirmativa de efeito metafísico</p>
+      <div class="highlight-box">
+        <i class="fas fa-route"></i>
+
+        <div>
+          <h3>Intenção → Objetivo → Próximo passo</h3>
+
+          <p>O sonho ganha direção quando encontra uma ação concreta.</p>
+        </div>
       </div>
+    </section>
 
-      <div class="step">
-        <div class="step-number">2</div>
-        <h3>Pronuncie</h3>
-        <p>Grave suas próprias afirmações e transforme sua voz em uma sessão meditativa.</p>
+    <!-- PRÁTICA -->
+    <section class="section">
+      <h2>Por que usar uma prática de intenção?</h2>
+
+      <p class="long-text">
+        Meditação, repetição de afirmações, visualização e atenção direcionada
+        aparecem em diferentes tradições de desenvolvimento pessoal.
+      </p>
+
+      <p class="long-text">
+        O QuantumLuck reúne essas práticas em uma experiência curta e
+        estruturada para você experimentar na rotina.
+      </p>
+
+      <p class="long-text">
+        O objetivo não é afirmar que uma frase ou uma frequência, isoladamente,
+        pode controlar acontecimentos externos. A proposta é criar um
+        <strong>ritual de atenção, reflexão e direcionamento</strong>.
+      </p>
+
+      <div class="benefits">
+        <div class="benefit">
+          <i class="fas fa-brain"></i>
+          <p>Presença</p>
+        </div>
+
+        <div class="benefit">
+          <i class="fas fa-bullseye"></i>
+          <p>Foco</p>
+        </div>
+
+        <div class="benefit">
+          <i class="fas fa-heart"></i>
+          <p>Intenção</p>
+        </div>
+
+        <div class="benefit">
+          <i class="fas fa-eye"></i>
+          <p>Visualização</p>
+        </div>
+
+        <div class="benefit">
+          <i class="fas fa-person-running"></i>
+          <p>Ação</p>
+        </div>
       </div>
+    </section>
 
-      <div class="step">
-        <div class="step-number">3</div>
-        <h3>Emoção</h3>
-        <p>Ative o sentimento correto; a emoção é a vibração que move o processo.</p>
+    <!-- FILOSOFIA -->
+    <section class="section">
+      <h2>O QuantumLuck não diz no que você deve acreditar</h2>
+
+      <p class="long-text">
+        Talvez você veja as frequências apenas como experiências sonoras. Talvez
+        encontre nelas um ambiente para meditação. Talvez se interesse pela
+        relação entre som, percepção e estados mentais.
+      </p>
+
+      <p class="long-text">
+        Talvez a espiritualidade faça parte da sua jornada. Talvez você enxergue
+        a manifestação como uma prática de visualização e direcionamento. Ou
+        talvez queira apenas alguns minutos de silêncio, foco e reflexão.
+      </p>
+
+      <p class="long-text">
+        <strong>Você não precisa escolher uma única interpretação.</strong>
+        O QuantumLuck foi criado para ser explorado.
+      </p>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="section cta-final-section">
+      <h2>Inicie sua Jornada Quântica</h2>
+
+      <p class="cta-final-text">
+        Transforme alguns minutos do seu dia em um momento para
+        <strong>
+          parar, respirar, escolher uma intenção e olhar novamente para o
+          caminho que está construindo.
+        </strong>
+      </p>
+
+      <p class="cta-final-text">
+        <strong> Três frases. Três minutos. Três vezes ao dia. </strong>
+      </p>
+
+      <div class="cta-container">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.quantumluck.app"
+          class="cta-button cta-button-large"
+          target="_blank"
+          rel="noopener"
+        >
+          <i class="fab fa-google-play"></i>
+          Baixar grátis na Play Store
+        </a>
+
+        <p class="cta-hint">Medite. Mentalize. Direcione. Aja.</p>
       </div>
+    </section>
 
-      <div class="step">
-        <div class="step-number">4</div>
-        <h3>Mentalização</h3>
-        <p>Visualize com clareza e detalhe como se já tivesse conquistado.</p>
+    <!-- PRIVACIDADE -->
+    <section class="section">
+      <h2>Transparência &amp; Confiança</h2>
+
+      <p class="long-text centered">
+        🔐 No <strong>QuantumLuck</strong>, sua experiência foi pensada para ser
+        simples, pessoal e privada.
+      </p>
+
+      <p class="long-text centered">
+        Sem cadastro. Sem login. A proposta é manter a experiência e os dados no
+        dispositivo.
+      </p>
+
+      <div class="cta-container">
+        <a
+          href="politica-de-privacidade.html"
+          class="cta-button cta-button-secondary"
+        >
+          Ler Política de Privacidade
+        </a>
       </div>
+    </section>
 
-      <div class="step">
-        <div class="step-number">5</div>
-        <h3>Registre</h3>
-        <p>Use o Gerenciador de Sonhos para acompanhar sua evolução e insights.</p>
+    <!-- FOOTER -->
+    <footer>
+      <p class="footer-tagline">
+        🧘 QuantumLuck — Medite. Mentalize. Direcione. Aja.
+      </p>
+
+      <p>
+        QuantumLuck © 2026 - Desenvolvido por Renan Fogaça - Todos os direitos
+        reservados
+      </p>
+
+      <div class="footer-links">
+        <a href="politica-de-privacidade.html"> Política de Privacidade </a>
+
+        |
+
+        <a href="mailto:deathrash06@gmail.com"> Contato </a>
+
+        |
+
+        <a href="#">
+          <i class="fab fa-instagram"></i>
+          Instagram
+        </a>
       </div>
-
-      <div class="step">
-        <div class="step-number">6</div>
-        <h3>Acreditar</h3>
-        <p>A fé cria consistência vibracional para manifestação.</p>
-      </div>
-
-      <div class="step">
-        <div class="step-number">7</div>
-        <h3>Ação</h3>
-        <p>Aplique foco e disciplina ao que está em suas mãos agora.</p>
-      </div>
-
-    </div>
-
-    <div class="disclaimer">
-      O QuantumLuck não promete resultados imediatos. Ele funciona como uma ferramenta de foco, alinhamento emocional e
-      fortalecimento mental.
-      Acreditar, sentir, visualizar e agir são a base da manifestação consciente — e sua disciplina é o que transforma
-      intenção em realidade.
-    </div>
-
-  </section>
-
-
-  <!-- CTA FINAL -->
-  <section class="section" style="text-align:center;">
-  <h2>Inicie sua Jornada Quântica</h2>
-  <p>
-    Torne-se um <strong>Explorador Quântico</strong> e alinhe mente, emoção e ação.
-  </p>
-  <a
-    href="https://play.google.com/store/apps/details?id=com.quantumluck.app"
-    class="cta-button"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    🚀 Instalar QuantumLuck Agora
-  </a>
-</section>
-
-
-  <!-- POLÍTICA -->
-  <section class="section" style="text-align:center;">
-    <h2>Transparência & Confiança</h2>
-    <p>
-      🔐 No <strong>QuantumLuck</strong>, sua jornada é sagrada — e seus dados também.
-      Respeitamos sua privacidade e seguimos princípios claros de proteção.
-    </p>
-    <a href="politica-de-privacidade.html" class="cta-button" style="margin-top:20px;">Ler Política de Privacidade</a>
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-    <p>QuantumLuck © 2025 - Desenvolvido por Renan Fogaça - Todos os direitos reservados</p>
-    <div>
-      <a href="politica-de-privacidade.html">Política de Privacidade</a> |
-      <a href="#">Contato</a> |
-      <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
-    </div>
-  </footer>
-
-
-  <!-- ANIMAÇÃO DE SEÇÕES -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      const sections = document.querySelectorAll('.section');
-
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-          }
-        });
-      }, { threshold: 0.1 });
-
-      sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(20px)';
-        section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-        observer.observe(section);
-      });
-    });
-  </script>
-
-  <!-- SCRIPT DO ÁTOMO (CLIQUE E BALÃO) -->
-  <script src="script.js" defer></script>
-  <!-- =======================================
-        CSS FUTURE COSMIC (AJUSTADO)
-  ======================================== -->
-
-  <style>
-    :root {
-      --accent: #4cc3ff;
-      --accent2: #7a4cff;
-      --gold: #d4af37;
-      --light: #f8f9fa;
-      --dark: #0b0b0b;
-      --bg1: #020617;
-      --bg2: #06122a;
-    }
-
-    body {
-      background: linear-gradient(180deg, var(--bg1), var(--bg2));
-      color: var(--light);
-      line-height: 1.7;
-      margin: 0;
-      font-family: Inter, system-ui, sans-serif;
-      overflow-x: hidden;
-    }
-
-
-    /* ===========================
-       HERO COM IMAGEM + ÁTOMO
-    ============================ */
-
-    .hero-header {
-      position: relative;
-      height: 450px;
-      overflow: hidden;
-    }
-
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      background: url('assets/QuantumLuck.png') center/cover no-repeat;
-      filter: brightness(0.8) saturate(1.2);
-      opacity: 0.9;
-    }
-
-    /* ATOMO FLUTUANTE COM 3 EFEITOS AVANÇADOS */
-    .app-icon {
-      cursor: pointer;
-      user-select: none;
-      position: absolute;
-      top: 55%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 180px;
-      height: 180px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: float 6s ease-in-out infinite;
-      border-radius: 50%;
-
-      background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(0, 200, 255, 0.35);
-
-      box-shadow:
-        0 0 25px rgba(0, 200, 255, 0.5),
-        0 0 45px rgba(124, 58, 237, 0.4);
-
-      overflow: visible;
-    }
-
-    /* =============================== */
-    /* 1️⃣ PLASMA ELÉTRICO GIRANDO */
-    /* =============================== */
-    .app-icon::before {
-      content: "";
-      position: absolute;
-      width: 220px;
-      height: 220px;
-      border-radius: 50%;
-
-      background: conic-gradient(rgba(0, 200, 255, 0.0) 0deg,
-          rgba(0, 200, 255, 0.15) 70deg,
-          rgba(124, 58, 237, 0.25) 160deg,
-          rgba(0, 200, 255, 0.0) 360deg);
-
-      filter: blur(18px);
-      animation: plasma-spin 6s linear infinite;
-      z-index: -1;
-    }
-
-    @keyframes plasma-spin {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-    /* =============================== */
-    /* 2️⃣ PARTÍCULAS ORBITANDO */
-    /* =============================== */
-    .app-icon .particle {
-      position: absolute;
-      width: 6px;
-      height: 6px;
-      background: rgba(0, 200, 255, 0.9);
-      border-radius: 50%;
-      box-shadow: 0 0 10px rgba(0, 200, 255, 0.9);
-    }
-
-    .p1 {
-      animation: orbit1 6s linear infinite;
-    }
-
-    .p2 {
-      animation: orbit2 7s linear infinite;
-    }
-
-    .p3 {
-      animation: orbit3 5s linear infinite;
-    }
-
-    @keyframes orbit1 {
-      from {
-        transform: rotate(0deg) translateX(100px) rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg) translateX(100px) rotate(-360deg);
-      }
-    }
-
-    @keyframes orbit2 {
-      from {
-        transform: rotate(0deg) translateX(75px) rotate(0deg);
-      }
-
-      to {
-        transform: rotate(-360deg) translateX(75px) rotate(360deg);
-      }
-    }
-
-    @keyframes orbit3 {
-      from {
-        transform: rotate(0deg) translateX(55px) rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg) translateX(55px) rotate(-360deg);
-      }
-    }
-
-    /* =============================== */
-    /* 3️⃣ LINHAS DE ENERGIA ROTATIVAS */
-    /* =============================== */
-
-    .app-icon::after {
-      content: "";
-      position: absolute;
-      width: 260px;
-      height: 260px;
-      border-radius: 50%;
-      border-top: 1px solid rgba(0, 255, 255, 0.4);
-      border-bottom: 1px solid rgba(124, 58, 237, 0.4);
-      animation: energy-lines 10s linear infinite;
-      z-index: -2;
-    }
-
-    @keyframes energy-lines {
-      from {
-        transform: rotate(0deg);
-      }
-
-      to {
-        transform: rotate(360deg);
-      }
-    }
-
-
-
-    .logo-img {
-      width: 120%;
-      height: 120%;
-      object-fit: contain;
-      filter: drop-shadow(0 0 18px rgba(76, 195, 255, 0.5));
-    }
-
-    @keyframes float {
-
-      0%,
-      100% {
-        transform: translate(-50%, -50%) translateY(0);
-      }
-
-      50% {
-        transform: translate(-50%, -50%) translateY(-12px);
-      }
-    }
-
-
-    /* Texto abaixo do hero */
-    .intro-text {
-      text-align: center;
-      padding: 40px 20px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      font-size: 1.25rem;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.8;
-    }
-
-
-
-    /* ===========================
-       BOTÃO
-    ============================ */
-
-    .cta-button {
-      display: inline-block;
-      padding: 16px 45px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #021124;
-      text-decoration: none;
-      font-weight: bold;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      box-shadow: 0 5px 25px rgba(76, 195, 255, 0.4);
-    }
-
-    .cta-button:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 30px rgba(76, 195, 255, 0.6);
-    }
-
-
-    /* ===========================
-       SEÇÕES (ORIGINAIS)
-    ============================ */
-
-    .section {
-      max-width: 1200px;
-      margin: 80px auto;
-      padding: 50px 40px;
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 20px;
-      backdrop-filter: blur(18px);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-
-    .section h2 {
-      text-align: center;
-      margin-bottom: 35px;
-      font-size: 2.5rem;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    /* grid dos cards preservado */
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .feature {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 30px;
-      border-radius: 18px;
-      text-align: center;
-      transition: 0.4s;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .feature:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 10px 25px rgba(76, 195, 255, 0.2);
-    }
-
-    .feature i {
-      font-size: 2.6rem;
-      margin-bottom: 15px;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .feature h3 {
-      color: white;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-    }
-
-    .feature p {
-      color: rgba(255, 255, 255, 0.8);
-      line-height: 1.6;
-    }
-
-
-    .long-text {
-      color: rgba(255, 255, 255, 0.85);
-    }
-
-
-    /* steps */
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 25px;
-      margin-top: 35px;
-    }
-
-    .step {
-      background: rgba(255, 255, 255, 0.08);
-      padding: 30px;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      text-align: center;
-      transition: 0.3s;
-    }
-
-    .step:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(76, 195, 255, 0.2);
-    }
-
-    .step-number {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #021124;
-      font-weight: bold;
-      margin: 0 auto 20px;
-      font-size: 1.3rem;
-    }
-
-
-    footer {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 40px 20px;
-      margin-top: 60px;
-      text-align: center;
-      color: rgba(255, 255, 255, 0.7);
-    }
-
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
-      margin: 0 10px;
-    }
-
-    /* FADE TRANSPARENTE NO FINAL DO HEADER (SEM BLUR) */
-    .hero-header::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      height: 140px;
-      background: linear-gradient(to bottom,
-          rgba(0, 0, 0, 0) 0%,
-          /* totalmente invisível */
-          rgba(0, 0, 0, 0.15) 40%,
-          /* leve escurecido suave */
-          rgba(0, 0, 0, 0.35) 75%,
-          /* mais forte */
-          rgba(2, 6, 23, 1) 100%
-          /* fundo principal */
+    </footer>
+
+    <!-- ANIMAÇÃO DAS SEÇÕES -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll(".section");
+
+        if (!("IntersectionObserver" in window)) {
+          sections.forEach((section) => {
+            section.style.opacity = "1";
+            section.style.transform = "translateY(0)";
+          });
+
+          return;
+        }
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }
+            });
+          },
+          { threshold: 0.1 },
         );
-      pointer-events: none;
-    }
 
-    /* ============================= */
-    /* RESPONSIVO PARA CELULAR       */
-    /* ============================= */
-    @media (max-width: 768px) {
-      .hero-header {
-        height: 350px;
-        /* altura menor no celular */
-      }
+        sections.forEach((section) => {
+          section.style.opacity = "0";
+          section.style.transform = "translateY(20px)";
+          section.style.transition = "opacity 0.8s ease, transform 0.8s ease";
 
-      .hero-bg {
-        background-size: cover;
-        background-position: center;
-      }
+          observer.observe(section);
+        });
+      });
+    </script>
 
-      .app-icon {
-        width: 130px;
-        /* menor tamanho do átomo */
-        height: 130px;
-      }
-
-      .app-icon::before {
-        width: 160px;
-        height: 160px;
-      }
-
-      .app-icon::after {
-        width: 200px;
-        height: 200px;
-      }
-
-      .logo-img {
-        width: 100%;
-        height: auto;
-        max-width: 120px;
-      }
-
-      .intro-text {
-        font-size: 1rem;
-        padding: 30px 15px 15px;
-      }
-
-      .cta-button {
-        padding: 12px 30px;
-        font-size: 1rem;
-      }
-
-      .section {
-        padding: 30px 20px;
-        margin: 50px 15px;
-      }
-
-      .section h2 {
-        font-size: 2rem;
-      }
-    }
-
-    /* Balão de aviso */
-    .bubble {
-      position: absolute;
-      background: rgba(76, 195, 255, 0.9);
-      color: #021124;
-      padding: 12px 18px;
-      border-radius: 12px;
-      font-size: 1rem;
-      max-width: 220px;
-      text-align: center;
-      pointer-events: none;
-      opacity: 0;
-      transition: opacity 0.3s ease, transform 0.3s ease;
-      z-index: 999;
-    }
-
-    .bubble.show {
-      opacity: 1;
-      transform: translateY(-10px);
-    }
-
-    /* Vibração rápida */
-    @keyframes vibrate {
-      0% {
-        transform: translate(-50%, -50%) translateX(0px) translateY(0px);
-      }
-
-      25% {
-        transform: translate(-50%, -50%) translateX(2px) translateY(-2px);
-      }
-
-      50% {
-        transform: translate(-50%, -50%) translateX(-2px) translateY(2px);
-      }
-
-      75% {
-        transform: translate(-50%, -50%) translateX(2px) translateY(2px);
-      }
-
-      100% {
-        transform: translate(-50%, -50%) translateX(0px) translateY(0px);
-      }
-    }
-
-    .vibrate {
-      animation: vibrate 0.3s ease-in-out 1;
-    }
-
-    /* Balão de frase */
-    .phrase-bubble {
-      position: fixed !important;
-      background: rgba(0, 0, 0, 0.95) !important;
-      color: #4cc3ff !important;
-      padding: 15px 20px !important;
-      border-radius: 16px !important;
-      box-shadow:
-        0 0 25px rgba(76, 195, 255, 0.7),
-        inset 0 0 15px rgba(76, 195, 255, 0.2) !important;
-      font-weight: bold !important;
-      z-index: 9999 !important;
-      font-size: 15px !important;
-      border: 1px solid #4cc3ff !important;
-      max-width: 300px !important;
-      word-wrap: break-word !important;
-      text-align: center !important;
-      white-space: normal !important;
-      line-height: 1.5 !important;
-      opacity: 0;
-      transition: opacity 0.3s ease !important;
-      backdrop-filter: blur(10px);
-    }
-
-    .phrase-bubble.show {
-      opacity: 1;
-    }
-
-
-    /* Balão Educativo */
-.tutorial-bubble {
-    position: fixed;
-    bottom: 600px !important; /* 🔥 DISTÂNCIA DO FUNDO */
-    left: 50%;
-    transform: translateX(-50%); /* 🔥 SÓ HORIZONTAL */
-    background: rgba(76, 195, 255, 0.95);
-    color: #021124;
-    padding: 12px 20px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 16px;
-    z-index: 9998;
-    box-shadow: 0 5px 20px rgba(76, 195, 255, 0.6);
-    border: 2px solid #4cc3ff;
-    opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
-    pointer-events: none;
-    white-space: nowrap;
-    text-align: center;
-}
-
-    /* Seta apontando para o átomo */
-    .tutorial-bubble::after {
-      content: '';
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-      border: 10px solid transparent;
-      border-top-color: rgba(76, 195, 255, 0.95);
-    }
-
-    /* Para mobile */
-    @media (max-width: 768px) {
-      .tutorial-bubble {
-        font-size: 14px;
-        padding: 10px 16px;
-        bottom: 100px;
-      }
-    }
-  </style>
-
-  <script>
-  function showInstallTip() {
-    alert(
-      "📲 QuantumLuck já está disponível!\n\nClique em 'Instalar' na Play Store e comece sua jornada de alinhamento mental e foco."
-    );
-  }
-</script>
-
-</body>
-
+    <!-- ÁTOMO — NÃO ALTERAR -->
+    <script src="script.js" defer></script>
+  </body>
 </html>
