@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>QuantumLuck — Uma frase chegou até você</title>
+    <meta
+      name="description"
+      content="Uma frase chegou até você. Respire fundo."
+    />
+    <meta name="theme-color" content="#06122a" />
+
+    <!-- Open Graph (WhatsApp, Facebook, Telegram) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="🌀 QuantumLuck" />
+    <meta
+      property="og:description"
+      content="Uma frase chegou até você. Respire fundo."
+    />
+    <meta
+      property="og:image"
+      content="https://fogacadev.github.io/QuantumLuckWeb/assets/og-preview.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:url"
+      content="https://fogacadev.github.io/QuantumLuckWeb/frase.html"
+    />
+    <meta property="og:site_name" content="QuantumLuck" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="🌀 QuantumLuck" />
+    <meta
+      name="twitter:description"
+      content="Uma frase chegou até você. Respire fundo."
+    />
+    <meta
+      name="twitter:image"
+      content="https://fogacadev.github.io/QuantumLuckWeb/assets/og-preview.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/btn.png" />
+    <link rel="apple-touch-icon" href="assets/btn.png" />
+
+    <!-- CSS Principal do site -->
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .phrase-page {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+        background: linear-gradient(180deg, #020617, #06122a);
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .phrase-container {
+        max-width: 600px;
+        width: 100%;
+        text-align: center;
+        padding: 60px 40px;
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 24px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+      }
+
+      .phrase-symbol {
+        font-size: 3rem;
+        color: #d4af37;
+        margin-bottom: 30px;
+        text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+      }
+
+      .phrase-text {
+        font-family: "Orbitron", system-ui, sans-serif;
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 1.6;
+        color: #ffffff;
+        margin: 0 0 20px 0;
+        font-style: italic;
+        letter-spacing: 0.5px;
+      }
+
+      .phrase-context {
+        font-size: 0.95rem;
+        color: rgba(255, 255, 255, 0.65);
+        margin: 0 0 40px 0;
+        font-style: italic;
+        line-height: 1.5;
+      }
+
+      .phrase-brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 20px;
+        background: rgba(212, 175, 55, 0.08);
+        border: 1px solid rgba(212, 175, 55, 0.25);
+        border-radius: 50px;
+        margin-bottom: 30px;
+      }
+
+      .phrase-brand-symbol {
+        font-size: 1.3rem;
+      }
+
+      .phrase-brand-name {
+        font-family: "Orbitron", system-ui, sans-serif;
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #d4af37;
+        letter-spacing: 1px;
+      }
+
+      .phrase-cta {
+        display: inline-block;
+        padding: 16px 40px;
+        background: linear-gradient(135deg, #4cc3ff, #7a4cff);
+        color: #021124;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 50px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 25px rgba(76, 195, 255, 0.4);
+      }
+
+      .phrase-cta:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 30px rgba(76, 195, 255, 0.6);
+      }
+
+      @media (max-width: 480px) {
+        .phrase-container {
+          padding: 40px 25px;
+        }
+        .phrase-text {
+          font-size: 1.3rem;
+        }
+        .phrase-symbol {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <main class="phrase-page">
+      <div class="phrase-container">
+        <div class="phrase-symbol">✦</div>
+
+        <p class="phrase-text" id="phrase-text">Carregando...</p>
+
+        <p class="phrase-context" id="phrase-context">
+          Você recebeu uma frase. Que tal fazer uma pausa de 3 minutos hoje?
+        </p>
+
+        <div class="phrase-brand">
+          <span class="phrase-brand-symbol">🌀</span>
+          <span class="phrase-brand-name">QuantumLuck</span>
+        </div>
+
+        <div>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.quantumluck.app"
+            class="phrase-cta"
+            target="_blank"
+            rel="noopener"
+          >
+            Conheça o QuantumLuck
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Lê a frase da query string (?t=)
+      const params = new URLSearchParams(window.location.search);
+      const frase = params.get("t");
+
+      // Detecta idioma do navegador
+      const isEN = navigator.language.startsWith("en");
+
+      const phraseTextEl = document.getElementById("phrase-text");
+      const phraseContextEl = document.getElementById("phrase-context");
+
+      if (frase) {
+        phraseTextEl.textContent = `"${frase}"`;
+        document.title = `"${frase}" — QuantumLuck`;
+      } else {
+        phraseTextEl.textContent = isEN
+          ? '"Every intention begins in silence."'
+          : '"Toda intenção começa em silêncio."';
+      }
+
+      if (isEN) {
+        phraseContextEl.textContent =
+          "A phrase reached you. How about a 3-minute pause today?";
+      }
+    </script>
+  </body>
+</html>
