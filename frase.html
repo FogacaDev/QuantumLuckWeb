@@ -5,151 +5,537 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>QuantumLuck — Uma frase chegou até você</title>
+
     <meta
       name="description"
-      content="Uma frase chegou até você. Respire fundo."
+      content="Uma frase chegou até você. Respire. Leia. Deixe a frase permanecer."
     />
-    <meta name="theme-color" content="#06122a" />
 
-    <!-- Open Graph (WhatsApp, Facebook, Telegram) -->
+    <meta name="theme-color" content="#020617" />
+
+    <!-- =========================================================
+         OPEN GRAPH
+         WhatsApp / Facebook / Telegram / outros
+    ========================================================== -->
+
     <meta property="og:type" content="website" />
+
     <meta property="og:title" content="🌀 QuantumLuck" />
+
     <meta
       property="og:description"
-      content="Uma frase chegou até você. Respire fundo."
+      content="Uma frase chegou até você. Respire. Leia. Deixe a frase permanecer."
     />
+
     <meta
       property="og:image"
       content="https://fogacadev.github.io/QuantumLuckWeb/assets/og-preview.png"
     />
+
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
+
+    <meta
+      property="og:image:alt"
+      content="QuantumLuck — Uma frase chegou até você"
+    />
+
     <meta
       property="og:url"
       content="https://fogacadev.github.io/QuantumLuckWeb/frase.html"
     />
+
     <meta property="og:site_name" content="QuantumLuck" />
 
-    <!-- Twitter Card -->
+    <!-- =========================================================
+         TWITTER / X
+    ========================================================== -->
+
     <meta name="twitter:card" content="summary_large_image" />
+
     <meta name="twitter:title" content="🌀 QuantumLuck" />
+
     <meta
       name="twitter:description"
-      content="Uma frase chegou até você. Respire fundo."
+      content="Uma frase chegou até você. Respire. Leia. Deixe a frase permanecer."
     />
+
     <meta
       name="twitter:image"
       content="https://fogacadev.github.io/QuantumLuckWeb/assets/og-preview.png"
     />
 
-    <!-- Favicon -->
+    <meta
+      name="twitter:image:alt"
+      content="QuantumLuck — Uma frase chegou até você"
+    />
+
+    <!-- =========================================================
+         FAVICON
+    ========================================================== -->
+
     <link rel="icon" type="image/png" href="assets/btn.png" />
     <link rel="apple-touch-icon" href="assets/btn.png" />
 
-    <!-- CSS Principal do site -->
+    <!-- CSS principal -->
     <link rel="stylesheet" href="style.css" />
 
+    <!-- =========================================================
+         ESTILO EXCLUSIVO DA PÁGINA DE FRASE
+    ========================================================== -->
+
     <style>
+      /* =========================================================
+         PÁGINA
+      ========================================================== */
+
       .phrase-page {
         min-height: 100vh;
+        min-height: 100svh;
+
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 40px 20px;
-        background: linear-gradient(180deg, #020617, #06122a);
+
+        padding: 32px 20px;
+
         margin: 0;
+
+        background:
+          radial-gradient(
+            circle at 50% 35%,
+            rgba(76, 195, 255, 0.08),
+            transparent 35%
+          ),
+          radial-gradient(
+            circle at 80% 80%,
+            rgba(122, 76, 255, 0.08),
+            transparent 35%
+          ),
+          linear-gradient(180deg, #020617 0%, #040b1c 55%, #06122a 100%);
+
         box-sizing: border-box;
+
+        position: relative;
+
+        overflow: hidden;
       }
+
+      /* brilho atmosférico */
+
+      .phrase-page::before {
+        content: "";
+
+        position: absolute;
+
+        width: 420px;
+        height: 420px;
+
+        top: -180px;
+        left: 50%;
+
+        transform: translateX(-50%);
+
+        background: radial-gradient(
+          circle,
+          rgba(76, 195, 255, 0.09),
+          transparent 70%
+        );
+
+        filter: blur(20px);
+
+        pointer-events: none;
+      }
+
+      /* =========================================================
+         CONTAINER
+      ========================================================== */
 
       .phrase-container {
-        max-width: 600px;
+        position: relative;
+        z-index: 1;
+
         width: 100%;
+        max-width: 620px;
+
+        padding: 62px 48px 50px;
+
         text-align: center;
-        padding: 60px 40px;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 24px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+        background: linear-gradient(
+          145deg,
+          rgba(255, 255, 255, 0.065),
+          rgba(255, 255, 255, 0.025)
+        );
+
+        border: 1px solid rgba(255, 255, 255, 0.09);
+
+        border-radius: 28px;
+
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+
+        box-shadow:
+          0 25px 80px rgba(0, 0, 0, 0.55),
+          inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+        box-sizing: border-box;
+
+        animation: phraseAppear 0.8s ease-out both;
       }
+
+      @keyframes phraseAppear {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* =========================================================
+         SÍMBOLO
+      ========================================================== */
 
       .phrase-symbol {
-        font-size: 3rem;
+        display: block;
+
+        font-size: 2.4rem;
+
+        line-height: 1;
+
         color: #d4af37;
-        margin-bottom: 30px;
-        text-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+
+        margin-bottom: 42px;
+
+        text-shadow:
+          0 0 15px rgba(212, 175, 55, 0.35),
+          0 0 35px rgba(212, 175, 55, 0.15);
+
+        opacity: 0.9;
       }
+
+      /* =========================================================
+         FRASE
+      ========================================================== */
 
       .phrase-text {
+        max-width: 520px;
+
+        margin: 0 auto;
+
         font-family: "Orbitron", system-ui, sans-serif;
-        font-size: 1.6rem;
-        font-weight: 600;
-        line-height: 1.6;
+
+        font-size: 1.65rem;
+
+        font-weight: 500;
+
+        line-height: 1.65;
+
+        letter-spacing: 0.2px;
+
         color: #ffffff;
-        margin: 0 0 20px 0;
+
         font-style: italic;
-        letter-spacing: 0.5px;
+
+        text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
       }
+
+      /* =========================================================
+         CONTEXTO
+      ========================================================== */
 
       .phrase-context {
-        font-size: 0.95rem;
-        color: rgba(255, 255, 255, 0.65);
-        margin: 0 0 40px 0;
-        font-style: italic;
-        line-height: 1.5;
+        max-width: 430px;
+
+        margin: 30px auto 42px;
+
+        color: rgba(255, 255, 255, 0.58);
+
+        font-size: 0.92rem;
+
+        line-height: 1.7;
+
+        font-style: normal;
+
+        letter-spacing: 0.15px;
       }
 
+      /* =========================================================
+         MARCA
+         Sem cápsula / sem botão / sem oval
+      ========================================================== */
+
       .phrase-brand {
-        display: inline-flex;
+        display: flex;
+
         align-items: center;
-        gap: 10px;
-        padding: 10px 20px;
-        background: rgba(212, 175, 55, 0.08);
-        border: 1px solid rgba(212, 175, 55, 0.25);
-        border-radius: 50px;
-        margin-bottom: 30px;
+        justify-content: center;
+
+        gap: 9px;
+
+        margin: 0 auto 38px;
+
+        color: rgba(255, 255, 255, 0.82);
       }
 
       .phrase-brand-symbol {
-        font-size: 1.3rem;
+        font-size: 1.15rem;
+
+        filter: drop-shadow(0 0 8px rgba(76, 195, 255, 0.35));
       }
 
       .phrase-brand-name {
         font-family: "Orbitron", system-ui, sans-serif;
-        font-size: 0.9rem;
-        font-weight: 700;
+
+        font-size: 0.85rem;
+
+        font-weight: 600;
+
+        letter-spacing: 1.8px;
+
         color: #d4af37;
-        letter-spacing: 1px;
       }
 
-      .phrase-cta {
-        display: inline-block;
-        padding: 16px 40px;
-        background: linear-gradient(135deg, #4cc3ff, #7a4cff);
-        color: #021124;
+      /* =========================================================
+         FRASE DA MARCA
+      ========================================================== */
+
+      .phrase-tagline {
+        margin: -20px auto 32px;
+
+        color: rgba(255, 255, 255, 0.42);
+
+        font-size: 0.78rem;
+
+        letter-spacing: 1.2px;
+
+        text-transform: uppercase;
+      }
+
+      /* =========================================================
+         ÁREA DOS BOTÕES
+      ========================================================== */
+
+      .phrase-buttons {
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 17px;
+
+        width: 100%;
+      }
+
+      /* =========================================================
+         CTA PRINCIPAL
+         Elegante, não parece botão de anúncio
+      ========================================================== */
+
+      .phrase-cta-primary {
+        display: inline-flex;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 10px;
+
+        min-width: 220px;
+
+        padding: 13px 26px;
+
+        border-radius: 12px;
+
+        background: linear-gradient(
+          135deg,
+          rgba(76, 195, 255, 0.16),
+          rgba(122, 76, 255, 0.16)
+        );
+
+        border: 1px solid rgba(76, 195, 255, 0.38);
+
+        color: rgba(255, 255, 255, 0.92);
+
         text-decoration: none;
-        font-weight: bold;
-        border-radius: 50px;
-        font-size: 1rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 25px rgba(76, 195, 255, 0.4);
+
+        font-size: 0.92rem;
+
+        font-weight: 600;
+
+        letter-spacing: 0.2px;
+
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          background 0.25s ease,
+          box-shadow 0.25s ease;
       }
 
-      .phrase-cta:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 30px rgba(76, 195, 255, 0.6);
+      .phrase-cta-primary:hover {
+        transform: translateY(-2px);
+
+        border-color: rgba(76, 195, 255, 0.7);
+
+        background: linear-gradient(
+          135deg,
+          rgba(76, 195, 255, 0.23),
+          rgba(122, 76, 255, 0.23)
+        );
+
+        box-shadow: 0 12px 30px rgba(76, 195, 255, 0.12);
       }
 
-      @media (max-width: 480px) {
+      .phrase-cta-primary:active {
+        transform: translateY(0);
+      }
+
+      /* =========================================================
+         GOOGLE PLAY
+         Link discreto
+      ========================================================== */
+
+      .phrase-play {
+        display: inline-flex;
+
+        align-items: center;
+
+        gap: 7px;
+
+        color: rgba(255, 255, 255, 0.42);
+
+        text-decoration: none;
+
+        font-size: 0.78rem;
+
+        letter-spacing: 0.3px;
+
+        transition: color 0.25s ease;
+      }
+
+      .phrase-play:hover {
+        color: rgba(255, 255, 255, 0.75);
+      }
+
+      .phrase-play-arrow {
+        color: #4cc3ff;
+
+        font-size: 0.85rem;
+      }
+
+      /* =========================================================
+         PEQUENA LINHA FINAL
+      ========================================================== */
+
+      .phrase-footer {
+        margin-top: 42px;
+
+        padding-top: 20px;
+
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+
+        color: rgba(255, 255, 255, 0.28);
+
+        font-size: 0.7rem;
+
+        letter-spacing: 0.6px;
+      }
+
+      /* =========================================================
+         MOBILE
+      ========================================================== */
+
+      @media (max-width: 600px) {
+        .phrase-page {
+          padding: 18px 14px;
+        }
+
         .phrase-container {
-          padding: 40px 25px;
+          padding: 48px 25px 38px;
+
+          border-radius: 24px;
         }
-        .phrase-text {
-          font-size: 1.3rem;
-        }
+
         .phrase-symbol {
-          font-size: 2.5rem;
+          font-size: 2.1rem;
+
+          margin-bottom: 34px;
+        }
+
+        .phrase-text {
+          font-size: 1.28rem;
+
+          line-height: 1.65;
+        }
+
+        .phrase-context {
+          font-size: 0.88rem;
+
+          margin-top: 25px;
+
+          margin-bottom: 36px;
+        }
+
+        .phrase-brand {
+          margin-bottom: 32px;
+        }
+
+        .phrase-tagline {
+          margin-top: -15px;
+
+          font-size: 0.7rem;
+
+          letter-spacing: 0.9px;
+        }
+
+        .phrase-cta-primary {
+          width: 100%;
+
+          max-width: 280px;
+
+          padding: 13px 22px;
+        }
+
+        .phrase-footer {
+          margin-top: 35px;
+        }
+      }
+
+      /* =========================================================
+         TELAS MUITO PEQUENAS
+      ========================================================== */
+
+      @media (max-width: 360px) {
+        .phrase-container {
+          padding: 40px 20px 32px;
+        }
+
+        .phrase-text {
+          font-size: 1.16rem;
+        }
+
+        .phrase-context {
+          font-size: 0.84rem;
+        }
+      }
+
+      /* =========================================================
+         ACESSIBILIDADE
+      ========================================================== */
+
+      @media (prefers-reduced-motion: reduce) {
+        .phrase-container {
+          animation: none;
+        }
+
+        .phrase-cta-primary {
+          transition: none;
         }
       }
     </style>
@@ -157,59 +543,117 @@
 
   <body>
     <main class="phrase-page">
-      <div class="phrase-container">
-        <div class="phrase-symbol">✦</div>
+      <section
+        class="phrase-container"
+        aria-label="Frase recebida pelo QuantumLuck"
+      >
+        <!-- Símbolo -->
+        <div class="phrase-symbol" aria-hidden="true">✦</div>
+
+        <!-- =====================================================
+             FRASE
+        ====================================================== -->
 
         <p class="phrase-text" id="phrase-text">Carregando...</p>
 
+        <!-- =====================================================
+             CONTEXTO
+        ====================================================== -->
+
         <p class="phrase-context" id="phrase-context">
-          Você recebeu uma frase. Que tal fazer uma pausa de 3 minutos hoje?
+          Uma frase chegou até você. Respire. Leia. Deixe a frase permanecer.
         </p>
 
+        <!-- =====================================================
+             MARCA
+        ====================================================== -->
+
         <div class="phrase-brand">
-          <span class="phrase-brand-symbol">🌀</span>
-          <span class="phrase-brand-name">QuantumLuck</span>
+          <span class="phrase-brand-symbol" aria-hidden="true"> 🌀 </span>
+
+          <span class="phrase-brand-name"> QuantumLuck </span>
         </div>
 
+        <div class="phrase-tagline">Reprograme sua mente</div>
+
+        <!-- =====================================================
+             AÇÕES
+        ====================================================== -->
+
         <div class="phrase-buttons">
-  <a href="https://play.google.com/store/apps/details?id=com.quantumluck.app"
-     class="phrase-cta phrase-cta-primary"
-     target="_blank"
-     rel="noopener">
-    🚀 Baixe agora
-  </a>
-  <a href="https://fogacadev.github.io/QuantumLuckWeb"
-     class="phrase-cta phrase-cta-secondary"
-     target="_blank"
-     rel="noopener">
-    Conheça o QuantumLuck
-  </a>
-</div>
+          <!-- CTA principal -->
+          <a
+            href="https://fogacadev.github.io/QuantumLuckWeb"
+            class="phrase-cta-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Conheça o QuantumLuck
+            <span aria-hidden="true">→</span>
+          </a>
+
+          <!-- Link secundário -->
+          <a
+            href="https://play.google.com/store/apps/details?id=com.quantumluck.app"
+            class="phrase-play"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Disponível no Google Play
+            <span class="phrase-play-arrow" aria-hidden="true"> ↗ </span>
+          </a>
+        </div>
+
+        <!-- =====================================================
+             RODAPÉ DISCRETO
+        ====================================================== -->
+
+        <div class="phrase-footer">Uma pausa. Uma frase. Uma intenção.</div>
+      </section>
     </main>
 
+    <!-- =========================================================
+         SCRIPT
+         Lê a frase compartilhada através de ?t=
+    ========================================================== -->
+
     <script>
-      // Lê a frase da query string (?t=)
       const params = new URLSearchParams(window.location.search);
+
       const frase = params.get("t");
 
-      // Detecta idioma do navegador
-      const isEN = navigator.language.startsWith("en");
+      const isEN = navigator.language.toLowerCase().startsWith("en");
 
       const phraseTextEl = document.getElementById("phrase-text");
+
       const phraseContextEl = document.getElementById("phrase-context");
+
+      /*
+       * Frase recebida
+       */
 
       if (frase) {
         phraseTextEl.textContent = `"${frase}"`;
+
         document.title = `"${frase}" — QuantumLuck`;
       } else {
+        /*
+         * Frase padrão quando a página é aberta
+         * sem ?t=
+         */
+
         phraseTextEl.textContent = isEN
           ? '"Every intention begins in silence."'
           : '"Toda intenção começa em silêncio."';
       }
 
+      /*
+       * Contexto / idioma
+       */
+
       if (isEN) {
         phraseContextEl.textContent =
-          "A phrase reached you. How about a 3-minute pause today?";
+          "A phrase reached you. Breathe. Read. Let the words remain.";
       }
     </script>
   </body>
