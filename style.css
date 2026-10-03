@@ -1248,4 +1248,26 @@ footer a:hover {
         padding: 14px 28px;
         font-size: 1rem;
     }
+
+
+    .phrase-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .phrase-cta-primary {
+        background: linear-gradient(135deg, #4cc3ff, #7a4cff);
+    }
+
+    .phrase-cta-secondary {
+        background: transparent;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: rgba(255, 255, 255, 0.9);
+    }
 }
